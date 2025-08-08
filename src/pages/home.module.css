@@ -10,23 +10,148 @@ body{
     padding-left:  130px;
     padding-right: 130px;
 }
-.name{
-    font-size: 17px;
+.hoverHighlight {
+  color: rgba(255, 100, 0, 1);
+  display: inline;          
+  transition: background-color 0.3s ease;
 }
+.nak:hover {
+  background-color: rgba(255, 165, 0, 0.3); 
+  border-radius: 4px;
+  color: rgba(255, 100, 0, 1);
+} 
+
 .mid{
     display: flex;
     gap: 30px;
     font-size: 16px;
 }
+.mid:hover{
+    cursor: pointer;
+    
+}
 .rt{
-    color: rgba(255, 165, 0, 1);
+    color: rgba(255, 100, 0, 1);
+    text-decoration: underline;
+}
+.rt:hover{
+    text-decoration: underline;
+    color: rgba(255, 100, 0, 1);
+}
+.mt:hover{
+    text-decoration: underline;
+    color: rgba(255, 100, 0, 1);
 }
 .btn{
     width: 150px;
     height: 35px;
     margin-top: 15px;
     margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
     background-color: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
     font-size: 17px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 100, 0, 1);
+}
+.pic{
+    position: absolute;
+    margin-top: 30px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 480px;
+    border-radius: 50% / 50%;
+}
+.abtmr{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 130px;
+}
+.hyy{
+  line-height: 0.8;
+}
+.hey{
+    font-weight: 700;
+    font-size: 18px;
+}
+.mer{
+    font-weight: 700;
+    font-size: 24px;
+}
+.rd{
+    font-weight: 300;
+    font-size: 12px;
+}
+.btns{
+    display: flex;
+    margin-top: 380px;
+    margin-left: 130px;
+    gap: 25px;
+}
+.hire{
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.hire:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+.expe{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(183, 65, 14, 1);
+    background-color: rgba(255, 100, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.expe:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(183, 65, 14, 1);
+   border: 2px solid rgba(0, 0, 0, 1); 
+}
+.secondpage{
+    background-color: rgba(0, 0, 0, 1);
+    height: 500px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: -250px;
+}
+.picshur{
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 30px;
+}
+.mtds{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    margin-top: -20px;
+    margin-left: 350px;
+}
+.expel{
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 400px;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 100, 0, 1);
+    background-color: rgba(255, 100, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.expel:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(183, 65, 14, 1);
+   border: 2px solid rgba(0, 0, 0, 1); 
 }
