@@ -1,7 +1,7 @@
 body{
     background-color: rgba(192, 192, 192, 1);
 }
-.header{
+/* .header{
     background-color: rgba(0, 0, 0, 1);
     color: rgba(255, 255, 255, 1);
     height: 70px;
@@ -9,6 +9,8 @@ body{
     justify-content: space-between;
     padding-left:  130px;
     padding-right: 130px;
+    position: fixed;
+   
 }
 .hoverHighlight {
   color: rgba(255, 100, 0, 1);
@@ -33,14 +35,21 @@ body{
 .rt{
     color: rgba(255, 100, 0, 1);
     text-decoration: underline;
+    text-decoration-color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 .rt:hover{
     text-decoration: underline;
     color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 .mt:hover{
     text-decoration: underline;
     color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 .btn{
     width: 150px;
@@ -56,9 +65,9 @@ body{
 .btn:hover{
     cursor: pointer;
     background-color: rgba(255, 100, 0, 1);
-}
+} */
 .pic{
-    position: absolute;
+    /* position: absolute; */
     margin-top: 30px;
     width: 300px;
     height: 400px;
@@ -88,7 +97,7 @@ body{
 }
 .btns{
     display: flex;
-    margin-top: 380px;
+    margin-top: 50px;
     margin-left: 130px;
     gap: 25px;
 }
@@ -122,9 +131,9 @@ body{
 }
 .secondpage{
     background-color: rgba(0, 0, 0, 1);
-    height: 500px;
+    height: 600px;
     color: rgba(255, 255, 255, 1);
-    margin-top: -250px;
+    margin-top: 150px;
 }
 .picshur{
     position: absolute;
@@ -155,3 +164,101 @@ body{
     color: rgba(183, 65, 14, 1);
    border: 2px solid rgba(0, 0, 0, 1); 
 }
+.thirdpage{
+    margin-top: 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.conc{
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+.mainform{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ph{
+    width: 350px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid  rgba(105, 105, 105, 1);
+    background-color: rgba(211, 211, 211, 1);
+    padding-left: 15px;
+    font-size: 14px;
+}
+.phs{
+    width: 340px;
+    height: 200px;
+    border-radius: 4px;
+    border: 1px solid  rgba(105, 105, 105, 1);
+    background-color: rgba(211, 211, 211, 1);
+    padding: 15px 15px; 
+    font-size: 16px;
+}
+.buton{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.expels{
+    width:120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.expels:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+.lastpage{
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.socialicons {
+  margin-top: 40px; /* <-- add this line */
+}
+.socialicons a {  
+  color: white;
+  font-size: 24px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.socialicons a:hover {
+  box-shadow: 0 0 15px rgba(255, 100, 0, 1);
+  background-color: rgba(255, 100, 0, 0.2);
+  color: orange;
+}
+.laspo{
+    margin-top: -10px;
+    display: flex;
+    gap: 25px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.pt:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+.mkm{
+    margin-top: -15px;
+    font-weight: 300;
+    font-size: 10px;
+}
+
+

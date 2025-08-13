@@ -1,0 +1,176 @@
+.body{
+    background-color: rgba(192, 192, 192, 1)
+}
+.secondpage{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 150px;
+}
+.vertical{
+    display: flex;
+    flex-direction: column;
+    grid-area: 35px;
+}
+.firstpart{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    font-size: 24px;
+    line-height: 24px;
+}
+.secondpart{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 10px;
+}
+.techimg{
+    width: 400px;
+    height: 380px;
+    object-fit: cover;
+}
+.thirdpage{
+    background-color: rgba(255, 100, 0, 1);
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+   
+}
+.second{
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}
+.website{
+    width: 500px;
+    height: 400px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comp{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+}
+.web{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 30x;
+    margin-top: 30px;
+    line-height: 1.8px;
+}
+.words{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.1px !important;
+}
+.brth{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(169, 169, 169, 1);
+    border-radius: 4px;
+    width: 90px;
+    height: 30px;
+    padding-left: 10px;
+    font-weight: 550;
+    font-size: 13px;
+}
+.brth:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.fourthpage{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.yh{
+    margin-top: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    font-size: 22px;
+}
+.lol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.8px;
+}
+.tuy{
+     display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid transparent;
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-weight: 550;
+    font-size: 13px;
+    word-spacing: 3px;
+}
+.lastpage{
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialicons {
+  margin-top: 10px; /* <-- add this line */
+}
+.socialicons a {  
+  color: white;
+  font-size: 24px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.socialicons a:hover {
+  box-shadow: 0 0 15px rgba(255, 100, 0, 1);
+  background-color: rgba(255, 100, 0, 0.2);
+  color: orange;
+}
+.laspo{
+    margin-top: -20px;
+    display: flex;
+    gap: 25px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.pt:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+.mkm{
+    margin-top: -25px;
+    font-weight: 300;
+    font-size: 10px;
+}

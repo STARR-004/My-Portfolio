@@ -1,0 +1,63 @@
+.pic{
+    position: absolute;
+    margin-top: 30px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 480px;
+    border-radius: 50% / 50%;
+}
+.abtmr{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 130px;
+}
+.hyy{
+  line-height: 0.8;
+}
+.hey{
+    font-weight: 700;
+    font-size: 18px;
+}
+.mer{
+    font-weight: 700;
+    font-size: 24px;
+}
+.rd{
+    font-weight: 300;
+    font-size: 12px;
+}
+.btns{
+    display: flex;
+    margin-top: 380px;
+    margin-left: 130px;
+    gap: 25px;
+}
+.hire{
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.hire:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+.expe{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(183, 65, 14, 1);
+    background-color: rgba(255, 100, 0, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.expe:hover{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    color: rgba(183, 65, 14, 1);
+   border: 2px solid rgba(0, 0, 0, 1); 
+}
