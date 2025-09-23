@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,11 +12,41 @@ const Navbar = () => {
             ME<span className={styles.hoverHighlight}>RCY</span>
           </h3>
         </div>
+        
         <div className={styles.mid}>
-          <h3 className={styles.rt}>Home</h3>
-          <h3 className={styles.mt}>About</h3>
-          <h3 className={styles.mt}>Services</h3>
-          <h3 className={styles.mt}>Experience</h3>
+         
+           <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? `${styles.mt} ${styles.active}` : styles.mt
+            }
+          >
+            <h3>Home</h3>
+          </NavLink> 
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? `${styles.mt} ${styles.active}` : styles.mt
+            }
+          >
+            <h3>About</h3>
+          </NavLink>
+          <NavLink
+            to="/service"
+            className={({ isActive }) =>
+              isActive ? `${styles.mt} ${styles.active}` : styles.mt
+            }
+          >
+            <h3>Services</h3>
+          </NavLink>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) =>
+              isActive ? `${styles.mt} ${styles.active}` : styles.mt
+            }
+          >
+            <h3>Experience</h3>
+          </NavLink>
         </div>
         <div className={styles.conc}>
           <button className={styles.btn}>Contact Me</button>

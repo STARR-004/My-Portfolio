@@ -37,24 +37,24 @@
     cursor: pointer;
     
 }
-.rt{
-    color: rgba(255, 100, 0, 1);
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+ .mt {
+  text-decoration: none;
+  color: inherit;
 }
-.rt:hover{
-    text-decoration: underline;
-    color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+
+.mt:hover {
+  text-decoration: underline;
+  color: rgba(255, 100, 0, 1);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
-.mt:hover{
-    text-decoration: underline;
-    color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+
+.active {
+  color: rgba(255, 100, 0, 1);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 100, 0, 1);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 .btn{
     width: 150px;

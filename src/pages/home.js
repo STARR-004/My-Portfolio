@@ -1,13 +1,20 @@
 import React from "react";
 import { useState } from "react";
-import styles from "./home.module.css";
+import styles from "./Home.module.css";
 import me from "../assets/IMG_8938.jpeg";
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 import Navbar from "./Navbar";
+import { useNavigate } from 'react-router-dom';
 
 
 
-function home() {
+function Home() { 
+  const navigate = useNavigate();
+
+  const goExperience = () => {
+    navigate("/experience");
+  };
+  
   return (
     <div className={styles.body}>
       <div className={styles.firstpage}>
@@ -44,7 +51,9 @@ function home() {
           </div>
           <div className={styles.btns}>
             <button className={styles.hire}>Hire Me</button>
-            <button className={styles.expe}>Experience</button>
+            <button className={styles.expe} onClick={goExperience}>
+          Experience
+        </button>
           </div>
         </div>
       </div>
@@ -155,4 +164,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
