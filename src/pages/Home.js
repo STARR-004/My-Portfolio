@@ -34,25 +34,35 @@ function Home() {
   };
 
   const sendEmail = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_6vt306c", // Replace with your actual service ID
-        "template_pp62j8u", // Replace with your actual template ID
+  // 1️⃣ Send message to you
+  emailjs.sendForm(
+    "service_6vt306c",
+    "template_pp62j8u",  // your template for receiving messages
+    e.target,
+    "mckD9ztU1_NwVJjyD"
+  )
+  .then(
+    (result) => {
+      alert("Message sent successfully!");
+
+      // 2️⃣ Send auto-reply to client
+      emailjs.sendForm(
+        "service_6vt306c",
+        "template_yb48rez", // your new auto-reply template ID
         e.target,
-        "mckD9ztU1_NwVJjyD" // Replace with your public key from EmailJS dashboard
-      )
-      .then(
-        (result) => {
-          alert("Message sent successfully!");
-          e.target.reset(); // Clears the form
-        },
-        (error) => {
-          alert("Oops! Something went wrong. Please try again.");
-        }
+        "mckD9ztU1_NwVJjyD"
       );
-  };
+
+      e.target.reset();
+    },
+    (error) => {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  );
+};
+
 
   const location = useLocation();
 
