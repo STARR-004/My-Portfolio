@@ -15,8 +15,24 @@ import apparel from "../../assets/apparel.jpg";
 import gown from "../../assets/gown.jpg";
 import top from "../../assets/top.jpg";
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import Footer from "../Footer";
 
-const experience = () => {
+const Experience = () => {
+  const navigate = useNavigate();
+
+  const handleExploreServices = () => {
+    navigate("/service"); // This will route to the Service page
+  };
+
+  const goFaqs = () => {
+  navigate("/faqs");
+};
+
+  const handleGetInTouch = () => {
+  navigate('/#contact');
+};
+  
   return (
     <div className={styles.body}>
       <div className={styles.firstpage}>
@@ -40,10 +56,12 @@ const experience = () => {
             <h3>innovative fashion concepts. Explore a portfolio built on </h3>
             <h3>creativity, precision and impact.</h3>
           </div>
-          <button className={styles.expbtn}>Explore Services</button>
+          <button className={styles.expbtn} onClick={handleExploreServices}>
+      Explore Services
+    </button>
         </div>
         <div className={styles.hori}>
-          <img src={man} alt="man"></img>
+          <img src={man} alt="man" className={styles.man}></img>
         </div>
       </div>
 
@@ -131,7 +149,7 @@ const experience = () => {
         <div className={styles.bnth}>
           <h3>
             From robust backend architectures to dynamic frontend experiences, I
-            build,
+            build
           </h3>
           <h3>
             scalable and performant web applications using mordern frameworks
@@ -207,7 +225,7 @@ const experience = () => {
         <h1 className={styles.webo}>Creative Writing & Content Strategy</h1>
         <div className={styles.bnth}>
           <h3>
-            I craft compelling Narratives and engaging content that resonates
+            I craft compelling narratives and engaging content that resonates
             with target
           </h3>
           <h3>
@@ -274,11 +292,10 @@ const experience = () => {
             <div className={styles.commercelast}>
               <div className={styles.lo}>
                 <h3 className={styles.pls}>Sales Copy</h3>
-                <h3 className={styles.plsolg}>Email Campaigns</h3>
+                <h3 className={styles.uih}>PR</h3>
               </div>
               <div className={styles.km}>
-                <h3 className={styles.plsolm}>Product Marketing</h3>
-                <h3 className={styles.uih}>PR</h3>
+                <h3 className={styles.plsolm}>Product Marketing</h3>                
               </div>
             </div>
           </div>
@@ -354,7 +371,6 @@ const experience = () => {
                  <h3 className={styles.plsoljr}>Prototyping</h3>
               </div>
               <div className={styles.km}>
-               <h3 className={styles.plsolg}>Material Science</h3>
                 <h3 className={styles.plsoljr}>Fit & Comfort</h3>
               </div>
             </div>
@@ -363,59 +379,22 @@ const experience = () => {
       </div>
 
       <div className={styles.seventhpage}>
-        <h2 className={styles.rc}>Ready to Collaborate?</h2>
+        <h2 className={styles.rc}>Get in Touch</h2>
         <div className={styles.mik}>
           <h3>Whether you need a new website, engaging content or innovative</h3>
           <h3>design, I'm here to bring your vision to life.Let's create something</h3>
           <h3>extraordinary together.</h3>
         </div>
-        <button className={styles.gebtn}>Get in Touch</button>
+        <button className={styles.gebtn} onClick={handleGetInTouch}>
+  Get in Touch
+</button>
       </div>
 
       <div className={styles.lastpage}>
-              <div className={styles.socialicons}>
-                <a
-                  href="https://www.linkedin.com/in/mercy-lawal-9862122b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://www.facebook.com/share/1FRGEju952"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook />
-                </a>
-                <a
-                  href="https://www.instagram.com/starr.004?utm_source=qr&igsh=ajhxMGZ6bGJqYTZs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href=" https://github.com/STARR-004"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                </a>
-              </div>
-              <div className={styles.laspo}>
-                <h3 className={styles.pt}>FAQs</h3>
-                <h3 className={styles.pt}>Services</h3>
-                <h3 className={styles.pt}>About Me</h3>
-                <h3 className={styles.pt}>Contact</h3>
-                {/* <h3 className={styles.pt}>Privacy Policy</h3> */}
-              </div>
-              <div className={styles.mkm}>
-                <h3>©2025 Mercy| All Rights Reserved</h3>
-              </div>
-            </div>
+        <Footer />
+        </div>
     </div>
   );
 };
 
-export default experience;
+export default Experience;

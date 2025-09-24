@@ -1,0 +1,101 @@
+/* Footer.module.css */
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 24px 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows wrapping for small screens */
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  gap: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 90px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+/* Social icons */
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcons a {
+  color: #fff;
+  font-size: 22px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
+  background-color: rgba(255, 165, 0, 0.15);
+  color: orange;
+}
+
+/* Copyright */
+.copy {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 18px;
+  color: #ccc;
+}
+
+/* ================== Responsive Styles ================== */
+
+/* For iPhone 14 and similar screens (430px width and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}

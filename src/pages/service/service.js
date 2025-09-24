@@ -1,13 +1,24 @@
 import React from "react";
 import styles from "./service.module.css";
 import Navbar from "../Navbar";
-import techimg from "../../assets/WhatsApp Image 2025-08-11 at 09.12.45_c6ff3e38.jpg";
+import techimg from "../../assets/fabio-oyXis2kALVg-unsplash.jpg";
 import computer from "../../assets/47651.jpg";
 import write from "../../assets/krismas-irN_UAWAVHI-unsplash.jpg";
 import house from "../../assets/home-color-icon.png";
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import Footer from "../Footer";
 
-const service = () => {
+const Service = () => {
+  const navigate = useNavigate();
+
+  const handleStartProject = () => {
+    navigate('/#contact-form');
+  };
+   const goFaqs = () => {
+  navigate("/faqs");
+};
+  
   return (
     <div className={styles.body}>
       <div className={styles.firstpage}>
@@ -94,53 +105,16 @@ const service = () => {
           </h3>
           <h3>discuss your project and bring your ideas to life.</h3>
         </div>
-        <button className={styles.tuy}>Start Your Project Now</button>
+         <button className={styles.tuy} onClick={handleStartProject}>
+      Start Your Project Now
+    </button>
       </div>
 
       <div className={styles.lastpage}>
-        <div className={styles.socialicons}>
-          <a
-            href="https://www.linkedin.com/in/mercy-lawal-9862122b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://www.facebook.com/share/1FRGEju952"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://www.instagram.com/starr.004?utm_source=qr&igsh=ajhxMGZ6bGJqYTZs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href=" https://github.com/STARR-004"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
+        <Footer />
         </div>
-        <div className={styles.laspo}>
-          <h3 className={styles.pt}>FAQs</h3>
-          <h3 className={styles.pt}>Services</h3>
-          <h3 className={styles.pt}>About Me</h3>
-          <h3 className={styles.pt}>Contact</h3>
-          {/* <h3 className={styles.pt}>Privacy Policy</h3> */}
-        </div>
-        <div className={styles.mkm}>
-          <h3>©2025 Mercy| All Rights Reserved</h3>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default service;
+export default Service;

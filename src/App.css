@@ -1,6 +1,19 @@
 .App {
   text-align: center;
 }
+body {
+  margin: 0; /* reset */
+}
+
+main {
+  padding-top: 70px; /* equal to .header height on desktop */
+}
+
+@media (max-width: 430px) {
+  main {
+    padding-top: 60px; /* equal to .header height on mobile */
+  }
+}
 
 .App-logo {
   height: 40vmin;

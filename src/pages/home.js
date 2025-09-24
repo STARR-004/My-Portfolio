@@ -1,20 +1,67 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef } from "react";
 import styles from "./Home.module.css";
 import me from "../assets/IMG_8938.jpeg";
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 import Navbar from "./Navbar";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import Footer from "./Footer";
 
-
-
-function Home() { 
+function Home() {
   const navigate = useNavigate();
 
   const goExperience = () => {
     navigate("/experience");
   };
-  
+
+  const goService = () => {
+    navigate("/service");
+  };
+  const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const goAbout = () => {
+    navigate("/about");
+  };
+
+  const goFaqs = () => {
+    navigate("/faqs");
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_6vt306c", // Replace with your actual service ID
+        "template_pp62j8u", // Replace with your actual template ID
+        e.target,
+        "mckD9ztU1_NwVJjyD" // Replace with your public key from EmailJS dashboard
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          e.target.reset(); // Clears the form
+        },
+        (error) => {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      );
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#contact-form" && formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <div className={styles.body}>
       <div className={styles.firstpage}>
@@ -50,10 +97,12 @@ function Home() {
             <img src={me} alt="me" className={styles.pic}></img>
           </div>
           <div className={styles.btns}>
-            <button className={styles.hire}>Hire Me</button>
+            <button className={styles.hire} onClick={scrollToForm}>
+              Hire Me
+            </button>
             <button className={styles.expe} onClick={goExperience}>
-          Experience
-        </button>
+              Experience
+            </button>
           </div>
         </div>
       </div>
@@ -86,80 +135,73 @@ function Home() {
                 Whether it's building pixel-perfect UI or optimizing code for
                 speed, I'm focused on delivering digital experiences that
               </h4>
-              <h4>
-                stand out. From layout to interactivity, I ensure every element
-                enhances user experience and brand presence.
-              </h4>
+              <h4>stand out.</h4>
               <h4>Let's build something amazing together!</h4>
             </div>
           </div>
         </div>
         <div className={styles.btns}>
-          <button className={styles.expel}>Experience</button>
+          <button className={styles.expel} onClick={goExperience}>
+            Experience
+          </button>
         </div>
       </div>
-      <div className={styles.thirdpage}>
+      <div ref={formRef} className={styles.thirdpage}>
         <div className={styles.conc}>
           <h2 className={styles.mer}>
             Contact<span style={{ color: "rgba(255, 100, 0, 1)" }}> Me</span>
           </h2>
         </div>
-        <div className={styles.mainform}>
-          <input type="text" placeholder="Full Name" className={styles.ph} />
-          <input type="text" placeholder="Email" className={styles.ph} />
-          <input type="text" placeholder="Phone Number" className={styles.ph} />
-          <input type="text" placeholder="Subject" className={styles.ph} />
+        {/* <div style={{ height: "500px" }}></div> */}
+        <form
+          onSubmit={sendEmail}
+          className={styles.mainform}
+          id="contact-form"
+        >
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Full Name"
+            className={styles.ph}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className={styles.ph}
+            required
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            className={styles.ph}
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className={styles.ph}
+          />
           <textarea
+            name="message"
             placeholder="Your Message"
             className={styles.phs}
+            required
           ></textarea>
-        </div>
-        <div className={styles.buton}>
-          <button className={styles.expels}>Send Message</button>
-        </div>
+          <div className={styles.buton}>
+            <button type="submit" className={styles.expels}>
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
+
       <div className={styles.lastpage}>
-        <div className={styles.socialicons}>
-          <a
-            href="https://www.linkedin.com/in/mercy-lawal-9862122b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://www.facebook.com/share/1FRGEju952"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://www.instagram.com/starr.004?utm_source=qr&igsh=ajhxMGZ6bGJqYTZs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href=" https://github.com/STARR-004"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
+        <Footer />
         </div>
-        <div className={styles.laspo}>
-          <h3 className={styles.pt}>FAQs</h3>
-          <h3 className={styles.pt}>Services</h3>
-          <h3 className={styles.pt}>About Me</h3>
-          <h3 className={styles.pt}>Contact</h3>
-          {/* <h3 className={styles.pt}>Privacy Policy</h3> */}
-        </div>
-        <div className={styles.mkm}>
-          <h3>©2025 Mercy| All Rights Reserved</h3>
-        </div>
-      </div>
+      
     </div>
   );
 }

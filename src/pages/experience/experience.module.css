@@ -41,6 +41,10 @@
 .hori {
   margin-top: 80px;
 }
+.man{
+  width: 450px;
+  height: 350px;
+}
 .thirdpage {
   margin-left: 100px;
   margin-top: -20px;
@@ -66,6 +70,7 @@
 }
 .commercedesign {
   background-color: rgba(255, 255, 255, 1);
+  width: 320px;
 }
 .jy {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -78,7 +83,7 @@
 }
 .imgu {
   margin-top: 10px;
-  width: 360px;
+  width: 320px;
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
@@ -272,4 +277,161 @@
     margin-top: -25px;
     font-weight: 300;
     font-size: 10px;
+}
+
+/* =================== MOBILE RESPONSIVENESS =================== */
+@media (max-width: 430px) {
+  .secondpage {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vertical {
+    margin-top: 20px;
+  }
+
+  .firstpart h1 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .firstpart{
+    margin-top: 50px;
+  }
+
+  .secondpart {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .expbtn {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .hori {
+    margin-top: 30px;
+  }
+
+  .man {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .thirdpage,
+  .fourthpage {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .thirdpage{
+    margin-top: 100px;
+  }
+
+  .webo {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .bnth {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .picto {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .commercedesign {
+    width: 100%;
+    max-width: 340px;
+    padding: 10px;
+  }
+
+  .imgu {
+    width: 100%;
+    height: auto;
+  }
+
+  .jy {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .comercewrd {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+
+  .commercelast,
+  .commercelastg {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .ui,
+  .pl,
+  .pls,
+  .plso,
+  .plsol,
+  .plsolg,
+  .plsolm,
+  .plsoljr,
+  .uio,
+  .uih {
+    width: auto;
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+
+  .seventhpage {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .rc {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .mik {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 10px;
+  }
+
+  .gebtn {
+    width: 180px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .socialicons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .laspo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .mkm {
+    margin-top: 12px;
+    font-size: 12px;
+  }
 }

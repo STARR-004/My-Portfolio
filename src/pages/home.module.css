@@ -1,79 +1,15 @@
 body{
     background-color: rgba(192, 192, 192, 1);
 }
-/* .header{
-    background-color: rgba(0, 0, 0, 1);
-    color: rgba(255, 255, 255, 1);
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    padding-left:  130px;
-    padding-right: 130px;
-    position: fixed;
-   
-}
-.hoverHighlight {
-  color: rgba(255, 100, 0, 1);
-  display: inline;          
-  transition: background-color 0.3s ease;
-}
-.nak:hover {
-  background-color: rgba(255, 165, 0, 0.3); 
-  border-radius: 4px;
-  color: rgba(255, 100, 0, 1);
-} 
 
-.mid{
-    display: flex;
-    gap: 30px;
-    font-size: 16px;
-}
-.mid:hover{
-    cursor: pointer;
-    
-}
-.rt{
-    color: rgba(255, 100, 0, 1);
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-}
-.rt:hover{
-    text-decoration: underline;
-    color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-}
-.mt:hover{
-    text-decoration: underline;
-    color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-}
-.btn{
-    width: 150px;
-    height: 35px;
-    margin-top: 15px;
-    margin-right: 20px;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
-    font-size: 17px;
-}
-.btn:hover{
-    cursor: pointer;
-    background-color: rgba(255, 100, 0, 1);
-} */
 .pic{
-    /* position: absolute; */
     margin-top: 30px;
     width: 300px;
     height: 400px;
     object-fit: cover;
-    margin-left: 480px;
+    margin-left: 450px;
     border-radius: 50% / 50%;
+    margin-top: 70px;
 }
 .abtmr{
     position: absolute;
@@ -204,6 +140,10 @@ body{
     margin-top: 50px;
 }
 .expels{
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    margin-left: 125px;
     width:120px;
     height: 35px;
     border-radius: 5px;
@@ -217,48 +157,141 @@ body{
     color: rgba(0, 0, 0, 1);
     border: 2px solid rgba(0, 0, 0, 1);
 }
-.lastpage{
-    background-color: rgba(0, 0, 0, 1);
-    color: rgba(255, 255, 255, 1);
+
+
+
+/* ---------------- Mobile: iPhone 12 Pro (390px wide) ---------------- */
+@media screen and (max-width: 430px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .pic {
+    margin: 20px auto 0 auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .abtmr {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .hyy {
+    line-height: 1.2;
+  }
+
+  .hey {
+    font-size: 16px;
+  }
+
+  .mer {
+    font-size: 20px;
+  }
+
+  .rd {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 10px 20px;
+    text-align: center;
+  }
+
+  .btns {
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .hey{
+    margin-top: 80px;
+  }
+
+  .secondpage {
+    height: auto;
+    padding: 30px 15px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-}
-.socialicons {
-  margin-top: 40px; /* <-- add this line */
-}
-.socialicons a {  
-  color: white;
-  font-size: 24px;
-  background: transparent;
-  border-radius: 50%;
-  padding: 10px;
-  transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .picshur {
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .mtds {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .expel {
+    position: relative;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .thirdpage {
+    padding: 20px 10px;
+  }
+
+  .mainform {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .ph, .phs {
+    width: 100%;
+  }
+
+  .buton {
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .expels {
+    margin: 0 auto;
+  }
+
+ .lastpage {
+  padding: 20px 10px;
+  text-align: center;
 }
 
-.socialicons a:hover {
-  box-shadow: 0 0 15px rgba(255, 100, 0, 1);
-  background-color: rgba(255, 100, 0, 0.2);
-  color: orange;
+.socialicons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
-.laspo{
-    margin-top: -10px;
-    display: flex;
-    gap: 25px;
-    font-weight: 500;
-    font-size: 16px;
+
+.laspo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;
+  gap: 12px;
 }
-.pt:hover{
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 100, 0, 1);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+
+.laspo .pt {
+  font-size: 16px;
+  cursor: pointer;
 }
-.mkm{
-    margin-top: -15px;
-    font-weight: 300;
-    font-size: 10px;
+
+.mkm {
+  margin-top: 20px; /* reset the negative margin */
+  font-size: 12px;
+  text-align: center;
 }
+
+}
+
 
 

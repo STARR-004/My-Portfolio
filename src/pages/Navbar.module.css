@@ -1,3 +1,4 @@
+/* ---------- ORIGINAL DESKTOP STYLES (unchanged) ---------- */
 .header{
     background-color: rgba(0, 0, 0, 1);
     color: rgba(255, 255, 255, 1);
@@ -70,4 +71,101 @@
 .btn:hover{
     cursor: pointer;
     background-color: rgba(255, 100, 0, 1);
+}
+
+/* keep the btnLink in case it's used (no desktop layout change) */
+.btnLink {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* small helper if mtnew is referenced */
+/* .mtnew {} */
+
+/* ---------- HAMBURGER (hidden on desktop) ---------- */
+.menuBtn {
+  display: none; /* desktop: hidden */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ---------- MOBILE MENU (hidden by default; used only in mobile media query) ---------- */
+.mobileMenu {
+  display: none;
+}
+
+/* ---------- MOBILE-ONLY OVERRIDES (iPhone 12 Pro & similar) ---------- */
+@media (max-width: 430px) {
+  /* make header span full width on mobile and reduce big desktop paddings */
+  .header{
+    margin-left: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  /* hide desktop nav and desktop contact button on mobile */
+  .mid {
+    display: none;
+  }
+  .btnLink, .btn {
+    display: none;
+  }
+
+  /* show hamburger on mobile */
+  .menuBtn {
+    display: block;
+  }
+
+  .nak {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  /* Mobile dropdown menu styling (visible only when component renders it) */
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px; /* just below the header */
+    background-color: rgba(0,0,0,0.98);
+    padding: 16px;
+    z-index: 2000;
+    box-sizing: border-box;
+  }
+
+  .mobileLink {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: block;
+  }
+  .mobileLink:hover {
+    color: rgba(255, 100, 0, 1);
+    background: rgba(255,255,255,0.03);
+  }
+
+  /* keep active style consistent for mobile links */
+  .mobileLink.active,
+  .mobileLink:active {
+    color: rgba(255, 100, 0, 1);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 100, 0, 1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
 }
